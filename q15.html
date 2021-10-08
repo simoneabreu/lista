@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv= "X-UA-Compatible" content="IE=edge">
+      <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+      <title>Conversor</title>
+      
+   </head>
+   <body>
+   <h1>Conversor de moedas</h1>
+      <form action="">      
+               <label for="valor"class="label input">Valor:</label>
+               <input type="text" name="valor" id="valor"><br>
+               <input type="radio" name="converter" id="RealparaDolar" value="1">
+               <label for="RealparaDolar">Real para Dólar</label>
+               <input type="radio" name="converter" id="DolarparaReal" value="2">
+               <label for="DolarparaReal"> Dólar para real</label><br>
+               <label for="valorDaSaida">Valor convertido</label><br>
+               <input type="text" name="valorDaSaida" id="valorDaSaida">
+               <br>
+               <input type="button" id="buttonConverter" value="Conversão">
+               <br> 
+      </form>
+      <script>
+	  
+	  buttonConverter.onclick = handlerButton
+	  function handlerButton(){
+	   var entrada= document.getElementById("valor").value;
+	   var converter = document.getElementById("valorDaSaida")
+	   if(document.getElementById('RealparaDolar').checked){
+	   converter.value = valor * 0.2
+	  
+	   }else if(document.getElementById('DolarparaReal').checked){
+	   converter.value = valor * 6
+	   }else{
+	   alert("Nenhuma opçao");
+	  
+	  }
+	  
+   </script>
+	  
+   </body>
+</html>
